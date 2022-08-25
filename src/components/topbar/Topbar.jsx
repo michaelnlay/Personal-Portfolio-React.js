@@ -2,9 +2,12 @@
 import "./topbar.scss";
 import { Person, Email } from "@mui/icons-material";
 
-export default function Topbar() {
+//we take the menuOpen and setMenuOpen as props from the root App.jsx file
+export default function Topbar({menuOpen, setMenuOpen}) {
   return (
-    <div className="topbar">
+    // if menuOpen (meaning if menuOpen is true), then add active 
+    <div className={"topbar " + (menuOpen && "active")} >
+     
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
@@ -21,7 +24,7 @@ export default function Topbar() {
         </div>
 
         <div className="right">
-          <div className="hamburger">
+          <div className="hamburger" onClick={()=>setMenuOpen(!menuOpen)}>
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>

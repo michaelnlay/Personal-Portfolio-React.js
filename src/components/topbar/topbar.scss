@@ -8,6 +8,7 @@
   position: fixed;
   top: 0;
   z-index: 2;
+  transition: all 1s ease;
 
   .wrapper {
     padding: 10px 30px;
@@ -25,6 +26,7 @@
         text-decoration: none;
         color: inherit;
         margin-right: 40px;
+     
       }
       .itemContainer {
         display: flex;
